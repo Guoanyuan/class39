@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>day0101</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <!-- 将我们编写好的Servlet注册给tomcat -->
+  <servlet>
+  	<!-- name:自定义 -->
+  	<servlet-name>demo</servlet-name>
+  	<!-- Servlet的全限定名  包名+类名 -->
+  	<servlet-class>com.itheima.demo.HelloServlet</servlet-class>
+  </servlet>
+  
+  <!-- 编写映射路径   设置浏览器访问该Servlet的路径 -->
+  <servlet-mapping>
+  	<servlet-name>demo</servlet-name>
+  	<!-- 提供一个浏览器访问的路径   自定义 -->
+  	<url-pattern>/abc</url-pattern>
+  </servlet-mapping>
+  <!-- 
+  	浏览器访问:  http://localhost:80/day0101/abc
+   -->
+</web-app>
